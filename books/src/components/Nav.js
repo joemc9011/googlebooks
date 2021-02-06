@@ -7,13 +7,12 @@ function Nav(){
      
      <nav className="navbar navbar-expand-lg navbar-light bg-light">
   <div className="container-fluid">
-    <a className="navbar-brand" href="#">Google Books</a>
+    <a className="navbar-brand">Google Books</a>
 
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div className="navbar-nav">
-        <ul className = "nav-nav">
 
-          <li className = "nav-item">
+          <a className = "nav-item">
             <Link 
             to="/saved"
             className = {
@@ -24,24 +23,24 @@ function Nav(){
             >
               Saved
             </Link>
-          </li>
+          </a>
 
-          <li className = "nav-item">
+          <a className = "nav-item">
             <Link 
-            to="/searced"
+            to="/search"
             className = {
-              window.location.pathname === "/searched"
+              window.location.pathname === "/search"
               ? "nav-link active"
               : "nav-link"
             }
             >
-              Searched
+              Search
             </Link>
-          </li>
+          </a>
 
 
 
-        </ul>
+        
 
 
 
