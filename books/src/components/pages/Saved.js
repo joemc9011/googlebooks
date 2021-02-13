@@ -1,5 +1,5 @@
-import Book from "../Book";
-import Header from "../Header";
+import Book from "../Book/Book";
+import Header from "..//Header/Header";
 function Saved () {
     return (
         <div>

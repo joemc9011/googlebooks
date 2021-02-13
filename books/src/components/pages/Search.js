@@ -1,7 +1,15 @@
-import Book from "../Book";
-import Booksearch from "../Booksearch";
-import Header from "../Header";
-function Search () {
+import { Component } from "react";
+import Booksearch from "../Bookinput/Bookinput";
+import Header from "../Header/Header";
+
+class Search extends Component {
+    state = {
+        search: "",
+        books: [],
+        results: [],
+        error: ""
+    };
+render () {
     return (
         <div>
             <Header/>
@@ -18,6 +26,9 @@ function Search () {
         </div>
      
     );
-}
+}}
+
+
+
 
 export default Search;
