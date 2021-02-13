@@ -1,6 +1,6 @@
 import Nav from "./components/Nav/Nav";
-import Saved from "./components/pages/Saved";
-import Search from "./components/pages/Search";
+import Saved from "./pages/Saved";
+import Search from "./pages/Search";
 import Wrapper from "./components/Wrapper/Wrapper";
 
 import {BrowserRouter as Router, Route } from "react-router-dom";

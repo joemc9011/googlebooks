@@ -1,26 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 
 
 function Booksearch(props) {
-    const [searchTerm, setSearchTerm] = useState("");
-
-    const handleSearch=()=>{
-        //api
-        ///api/book/search
-    }
-
-    const handleChange = (e) => {
-        setSearchTerm(e.target.value)
-    }
-    return (
+  return (
         <div>
              <h5>Book Search</h5>
-        <input type="text" onChang={handleChange}value={searchTerm} placeholder="Please type book here" {...props}/>
-        <button onClick={handleSearch}>Search</button>
+        <input type="text" onChange={props.handleSearch}value={props.searchTerm} placeholder="Please type book here" {...props}/>
+        <button onClick={props.handleSubmit(props.searchTerm)}>Search</button>
         </div>
-       
-
         );
+    
 }
 
 export default Booksearch;

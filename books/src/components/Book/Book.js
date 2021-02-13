@@ -1,25 +1,32 @@
 import React from "react";
 
 
-function Book() {
+const Book = props => {
     return (
         <div>
-            <div className="card text-center">
-                <div className="card-header">
-                    <h3>Book Title</h3>
-                    <p>Synopsis</p>
-                    <p>Author</p>
-                </div>
-                <div className="card-body">
-                    <div className="col-md-4">
-                        <img src="{...}" alt="..." />
+            {props.savedBooks.map(booksave => {
+                return (
+                      <div className="card text-center">
+                    <div className="card-header">
+                        <h3>{booksave.title}</h3>
+
+                        <p>{booksave.author}</p>
                     </div>
-                    <p className="card-text"> Book info paragragh</p>
-                    <a href="#" className="btn btn-primary">View</a>
-                    <a href="#" className="btn btn-primary">Delete</a>
+                    <div className="card-body">
+                        <div className="col-md-4">
+                            <img src={booksave.image} alt={booksave.title} />
+                        </div>
+                        <p className="card-text">{booksave.description}</p>
+                        <button  className="btn btn-primary" onclick = {() => props.deleteButton(booksave.id)}>Delete</button>
+                    </div>
+
                 </div>
 
-            </div>
+
+                );
+              
+            })
+            }
 
 
 
